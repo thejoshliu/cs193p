@@ -16,13 +16,13 @@ struct ContentView: View { //behaves like a View
     //the value of this variable/property is computed (code insides runs everytime someone requests the property value
     var body: some View { //some = run this
         // Vstack is a way to combine views into 1 big thing
-        VStack(content: {
+        VStack(content: { //content is the parameter name, we feed it a Container that holds other types of Views used to build this View
             Image(systemName: "globe") // this is naming
             //Image is a struct (essentially instance of an Image type/class?)
             // add some modifiers below
                 .imageScale(.large) // calling the imageScale function param may not necessarily be named, just positional
                 .foregroundStyle(.tint) //calling the function foregoundstyle
-            Text("hello there") // Text struct
+            Text("hello there") // struct that is Text view (holds String type)
         })
         // can chain addl modifiers - and they only affect the instances/classes that they're native/allowed to access. imageScale has no impact on Text structure
         .font(.largeTitle)
